@@ -3,34 +3,50 @@
 
 @media only screen and (max-width: 600px) {
 
-  header {
-    background-color: gray;
+  .dark-mode {
+    background: #040720;
+    color: white;
+  }
+  
+  .dark-mode * {
+    color: white;
+  }
+  
+  .dark-mode #mainnav {
+    background: inherit;
+    color: inherit;
   }
 
-  header div,
-  section nav,
-  footer,
-  .content {
-    width: 100%;
-    padding: 0 auto;
+  .dark-mode #mainnav li a {
+    color: white;
+  }
+
+  header {
+    background-color: white;
+  }
+
+  .main-logo img {
+    min-width: 50%;
+  }
+  
+  #mainnav {
+    display: flex;
+  }
+  
+  #mainnav ul {
+    padding: 1.5625em 0 1.5625em 0;
   }
 
   section {
     padding: 0;
   }
 
-  section nav {
-    left: 0;
-    top: 0;
+  .maincontent {
+    font-size: 2.125em;
   }
 
   header div {
-    padding: 10px;
     text-align: center;
-  }
-
-  nav a {
-    display: block;
   }
 
   section {
@@ -38,19 +54,14 @@
   }
 
   .content {
-    padding: 10px;
+    margin-top: 20px;
     width: 100%;
-    min-height: 450px;
+    min-height: 350px;
   }
 
   footer div {
     position: relative;
-    margin: 0 auto;
   }
 
-  iframe {
-    height: auto;
-    width: auto;
-  }
-  
 }
+  
