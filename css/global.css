@@ -18,142 +18,194 @@
   * Remember to compress your imagery: https://enviragallery.com/9-best-free-image-optimization-tools-for-image-compression/ no one want to wait and download a 1 MB image on a mobile device
   * Fonts - web safe fonts will give you the most speed when someone is trying to view your site at an airport, museum, in a canyon - somewhere there is a slow connection, not everyone travels at the same speed
  * * * END CSS TIPS * * */
+/*blue, black, white, #32558C*/
 
 * {
   box-sizing: border-box;
-  color: white;
-  font-family: 'Thasadith', sans-serif;
+  color: black;
+  font-family: 'Thasadith', serif;
   padding: 0;
   margin: 0;
 }
 
-html, body {
-  height: 100px; /* Might Need To Change */
-  margin: 0;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Raleway', sans-serif;
+}
+
+.dark-mode {
+  background: #040720;
+  color: white;
+}
+
+.dark-mode * {
+  color: inherit;
+}
+
+.dark-mode #mainnav li a {
+  color: white;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#lightchange {
+  fill: white;
 }
 
 .container {
   padding: 0;
   min-height: 100%;
 
-  margin-top: -70px;
+  margin-top: 0px; /*-70*/
   margin-bottom: 0px;
-  margin-right: auto;
-  margin-left: auto;
+  margin-right: 0;
+  margin-left: 0;
 }
 
 header {
-  background-color: #3d3d3d;
-}
+  background-color: inherit;
+  /* width: 80%; changing the height adds unnecessary space to the side of the nav*/
 
-h1 {
-  font-family: 'Ubuntu Condensed', sans-serif;
-}
-
-header div {
-  width: 80%;
-
-  padding-top: 30px;
+  height: 10%; /*180px*/ 
+  padding-top: 0px;
   padding-right: 0;
   padding-bottom: 0px;
   padding-left: 0;
 
   margin-top: 0;
   margin-bottom: 0;
-  margin-right: auto;
-  margin-left: auto;
+  margin-right: 0;
+  margin-left: 0;
 }
 
-i {
-  font-family: 'Montserrat', sans-serif;
-}
-section {
-  background-image: url(atom.jpeg);
-
-  background-position: top top;
-  background-repeat: no-repeat;
-  min-height: 800%;
-  padding-top: 70px; /*0px*/
-  background-size: 1920px 1500px;
-}
-
-.main-logo img {
-  width: 5%;
-  height: auto;
-  left: 0px;
-  right: 0px;
-  margin: 12px; /* 5%, to space image from top of page*/
-  border-radius: 50%;
+ul, li {
+  padding: 0;
+  display: block;
 }
 
 #mainnav {
-	margin: 0 auto;
-  padding: 0;
-  text-align: center;
+  display: flex;
+  margin: 0; /*top right bottom left, 0 auto*/
 }
 
-ul {
-  padding: 0;
-  display: inline-block;
-  text-align: center;
-  list-style: none;
+#mainnav ul {
+  padding: 1.5625em 0 1.5625em 0;
 }
 
-.keypoints {
+#mainnav li {
+  display: inline;
+}
 
-  display: block;
+#mainnav li svg {
+  width: 5%;
+  height: auto;
+}
 
+#themechange {
+  display: inline;
+}
+
+#mainnav a {
+  color: black;
+  font-family: 'Oswald', sans-serif;
+  text-decoration: none;
+  font-size: 1.5625em;
+}
+
+#mainnav a:hover { 
+  transition: 3s linear;
+  text-decoration: underline black 3px;
+}
+
+.logo-content {
+  display: inherit;
+  flex: 1; /* shorthand for: flex-grow: 1, flex-shrink: 1, flex-basis: 0 */
+
+  align-items: center;
+}
+
+.main-logo img {
+  display: inherit;
+
+  width: 25%; /*to scale with width*/
+  /*margin: 12px; /* 5%, to space image from top of page*/
+  padding: 25px 0 25px 25px;
+  border-radius: 50%;
+}
+
+section {
+  background-image: inherit;
+
+  /* background-position: center center;
+  background-repeat: no-repeat; */
+  /* padding: 2% 0% 2% 15% */
+}
+
+.maincontent {
+  background-color: inherit; /*red, green, blue, opacity*/
+  font-family: "Raleway", sans-serif;
+
+  min-height: 500px;
+  text-align: left;
+  padding: 1% 0 0 5%;
+  font-size: 4.25em;
 }
 
 li {
-  display: inline-block;
+  display: block;
+  list-style-type: circle;
   margin: 0px 20px 0px 0px; /* spacing in-between the boxes */
-	padding: 10px 20px 10px 20px; /* spacing inside the boxes */
+  padding: 10px 0px 10px 0px; /* spacing inside the boxes 10 20 10 20*/
 }
 
-nav {
-  left: 25px;
-  position: relative;
-  top: 10px;
-  margin: 0 auto;
-  width: 80%;
+code {
+  display: inline-block;
+  background: rgba(1, 2, 3, 0.9);
+  font-family: "SFMono-Regular", "Consolas", "Liberation Mono", "Menlo", "monospace";
+  tab-size: 2;
+  word-break: normal;
+  hyphens: none;
+  white-space: pre;
+  overflow-x: scroll;
+  font-size: 16px;
+  padding: 2px 8px 2px 8px; /*5 20 12 22*/
+  line-height: 1.75;
 }
 
-nav a {
-  color: #ffffff;
-  font-family: 'Oswald', sans-serif;
-  padding: 0.5vh; /* ViewHeight */
-  text-decoration: none;
-  font-size: 18px;
-}
-
-.nav-link:hover {
-  color: lightgreen;
-}
-
-nav a {
-  transition: color 0.5s ease;
-}
-
-.content {
-  background-color: rgba(66, 66, 66, 0.85); /*red, green, blue, opacity*/
-
-  margin: 0 auto; /*using shorthand*/
-  min-height: 700px;
-  padding: 50px;
-  width: 80%;
+.lng-css, .lng-js, .lng-scss {
+  color: #f5d67b;
 }
 
 footer {
-  position: relative;
-  margin: 0 auto;
-  width: 80%;
-  height: 70px;
+  background-color: black;
+  width: 100%;
+  min-height: 90px;
+  text-align: center;
+  padding-top: 1%;
 }
 
 footer div {
   position: absolute;
   right: 0;
   width: 112px;
-  z-index: 1;
+  z-index: 2;
+}
+
+footer a {
+  padding: 0px 10px 0px 10px;
 }
